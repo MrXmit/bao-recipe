@@ -14,18 +14,26 @@ function index(req, res) {
   })
 }
 
-// function create(req, res) {
-//   req.body.tasty = !!req.body.tasty
-//   req.body.owner = req.user.profile._id
-//   Taco.create(req.body)
-//   .then(taco => {
-//     res.redirect('/tacos')
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })
-// }
+function create(req, res) {
+  if (req.body.cast) {
+		req.body.cast = req.body.cast.split(', ')
+	}
+	for (let key in req.body) {
+		if (req.body[key] === '') delete req.body[key]
+	}
+  
+  req.body.owner = req.user.profile._id
+  req.body.tags = [] 
+  console.log(req.body)
+  Bao.create(req.body)
+  .then(bao => {
+    res.redirect('/baos')
+  })
+  .catch(err => {
+    console.log('ERRORRRRR',err)
+    res.redirect('/baos')
+  })
+}
 
 // function show(req, res) {
 //   Taco.findById(req.params.tacoId)
@@ -114,7 +122,7 @@ function index(req, res) {
 
 export {
   index,
-  // create,
+  create,
   // show,
   // flipTasty,
   // edit,

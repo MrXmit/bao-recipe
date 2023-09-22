@@ -11,5 +11,5 @@ function isLoggedIn(req, res, next) {
 
 export {
   passDataToView,
-  isLoggedIn,
+  isLoggedIn
 }
