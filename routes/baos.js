@@ -10,7 +10,7 @@ router.post('/', isLoggedIn, baosCtrl.create)
 router.get('/:baoId', baosCtrl.show)
 router.get('/:baoId/edit', isLoggedIn, baosCtrl.edit)
 // router.patch('/:tacoId/flip-tasty', isLoggedIn, tacosCtrl.flipTasty)
-// router.put('/:tacoId', isLoggedIn, tacosCtrl.update)
+router.put('/:baoId', isLoggedIn, baosCtrl.update)
 router.delete('/:baoId', isLoggedIn, baosCtrl.delete)
 
 export {

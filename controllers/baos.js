@@ -65,24 +65,23 @@ function edit(req, res) {
   })
 }
 
-// function update(req, res) {
-//   Taco.findById(req.params.tacoId)
-//   .then(taco => {
-//     if (taco.owner.equals(req.user.profile._id)) {
-//       req.body.tasty = !!req.body.tasty
-//       taco.updateOne(req.body)
-//       .then(() => {
-//         res.redirect(`/tacos/${taco._id}`)
-//       })
-//     } else {
-//       throw new Error('🚫 Not authorized 🚫')
-//     }
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })  
-// }
+function update(req, res) {
+  Bao.findById(req.params.baoId)
+  .then(bao => {
+    if (bao.owner.equals(req.user.profile._id)) {
+      bao.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/baos/${bao._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/baos')
+  })  
+}
 
 function deleteBao(req, res) {
   Bao.findById(req.params.baoId)
@@ -107,6 +106,6 @@ export {
   create,
   show,
   edit,
-  // update,
+  update,
   deleteBao as delete
 }
