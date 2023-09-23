@@ -35,20 +35,20 @@ function create(req, res) {
   })
 }
 
-// function show(req, res) {
-//   Taco.findById(req.params.tacoId)
-//   .populate('owner')
-//   .then(taco => {
-//     res.render('tacos/show', {
-//       taco,
-//       title: '🥟 show'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })
-// }
+function show(req, res) {
+  Bao.findById(req.params.baoId)
+  .populate('owner')
+  .then(bao => {
+    res.render('baos/show', {
+      bao,
+      title: '🥟 show'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/baos')
+  })
+}
 
 // function flipTasty(req, res) {
 //   Taco.findById(req.params.tacoId)
@@ -123,7 +123,7 @@ function create(req, res) {
 export {
   index,
   create,
-  // show,
+  show,
   // flipTasty,
   // edit,
   // update,

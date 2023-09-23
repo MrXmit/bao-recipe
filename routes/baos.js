@@ -7,7 +7,7 @@ const router = Router()
 router.get('/', baosCtrl.index)
 router.post('/', isLoggedIn, baosCtrl.create)
 
-// router.get('/:tacoId', tacosCtrl.show)
+router.get('/:baoId', baosCtrl.show)
 // router.get('/:tacoId/edit', isLoggedIn, tacosCtrl.edit)
 // router.patch('/:tacoId/flip-tasty', isLoggedIn, tacosCtrl.flipTasty)
 // router.put('/:tacoId', isLoggedIn, tacosCtrl.update)

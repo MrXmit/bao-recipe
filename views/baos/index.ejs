@@ -34,11 +34,10 @@
 
   <h2>All the Baos!</h2>
   <ul>
-    <% baos.forEach(taco => { %>
+    <% baos.forEach(bao => { %>
       <li>
         🥟 
-        <a href="/tacos/<%= taco._id %>"><%= taco.name %></a> 
-        <!-- is <%= taco.tasty ? 'tasty' : 'not tasty' %> -->
+        <a href="/baos/<%= bao._id %>"><%= bao.name %></a> 
       </li>
     <% }) %>
   </ul>

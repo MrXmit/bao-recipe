@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <img src="<%= bao.owner.avatar %>" alt="a picture of the bao's owner">
+  <p>From the kitchen of <%= bao.owner.name %></p>
+  <h1><%= bao.name %></h1>
+  <h2><%= bao.recipe %></h2>
+  <h3><%= bao.cookingStyle %></h3>
+  <% if (user) { %>
+   
+  <% } %>
+</section>
+
+<%- include('../partials/footer') %>
