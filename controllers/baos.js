@@ -50,38 +50,20 @@ function show(req, res) {
   })
 }
 
-// function flipTasty(req, res) {
-//   Taco.findById(req.params.tacoId)
-//   .then(taco => {
-//     taco.tasty = !taco.tasty
-//     taco.save()
-//     .then(() => {
-//       res.redirect(`/tacos/${taco._id}`)
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect('/tacos')
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })
-// }
 
-// function edit(req, res) {
-//   Taco.findById(req.params.tacoId)
-//   .then(taco => {
-//     res.render('tacos/edit', {
-//       taco,
-//       title: 'edit 🥟'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })
-// }
+function edit(req, res) {
+  Bao.findById(req.params.baoId)
+  .then(bao => {
+    res.render('baos/edit', {
+      bao,
+      title: 'edit 🥟'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/baos')
+  })
+}
 
 // function update(req, res) {
 //   Taco.findById(req.params.tacoId)
@@ -102,30 +84,29 @@ function show(req, res) {
 //   })  
 // }
 
-// function deleteTaco(req, res) {
-//   Taco.findById(req.params.tacoId)
-//   .then(taco => {
-//     if (taco.owner.equals(req.user.profile._id)) {
-//       taco.deleteOne()
-//       .then(() => {
-//         res.redirect(`/tacos`)
-//       })
-//     } else {
-//       throw new Error('🚫 Not authorized 🚫')
-//     }
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/tacos')
-//   })  
-// }
+function deleteBao(req, res) {
+  Bao.findById(req.params.baoId)
+  .then(bao => {
+    if (bao.owner.equals(req.user.profile._id)) {
+      bao.deleteOne()
+      .then(() => {
+        res.redirect(`/baos`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/baos')
+  })  
+}
 
 export {
   index,
   create,
   show,
-  // flipTasty,
-  // edit,
+  edit,
   // update,
-  // deleteTaco as delete
+  deleteBao as delete
 }

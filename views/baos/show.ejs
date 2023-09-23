@@ -11,5 +11,16 @@
    
   <% } %>
 </section>
+<% if (bao.owner.equals(user?.profile._id)) { %>
 
+  <a href="/baos/<%= bao._id %>/edit">
+    <button class="btn">Edit this bao 🥟 🥟 </button>
+  </a>
+  <form action="/baos/<%= bao._id %>?_method=DELETE" method="POST">
+    <button class="btn" type="submit">
+      Delete this taco 🥟 💀
+    </button>
+  </form>
+
+  <% } %>
 <%- include('../partials/footer') %>
