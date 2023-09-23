@@ -9,6 +9,10 @@ const baoSchema = new Schema({
   },
   recipe: {
     type: String,
+  	required: true,
+  },
+  cookingStyle: {
+    type: String,
     enum: [ 'steamed', 'fried', 'steamed and sauteed'],
     default: 'steamed',
   },
