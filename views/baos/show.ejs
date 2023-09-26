@@ -2,10 +2,10 @@
 	<%- include('../partials/nav') %>
 
 		<section>
-			<img src="<%= bao.owner.avatar %>" alt="a picture of the Bao's owner">
-			<p>From the kitchen of <%= bao.owner.name %>
+			<img src="<%= bao.owner.avatar %>" alt="a picture of the Bao's owner" class="img-fluid rounded-circle">
+			<p class="mt-2">From the kitchen of <%= bao.owner.name %>
 			</p>
-			<h1>
+			<h1 class="mt-3">
 				<%= bao.name %>
 			</h1>
 			<h2>
@@ -16,15 +16,11 @@
 			</h3>
 
 			<% if (bao.owner.equals(user?.profile._id)) { %>
-				<a href="/baos/<%= bao._id %>/edit">
-					<button class="btn">Edit this bao 🥟 🥟 </button>
-				</a>
+				<a href="/baos/<%= bao._id %>/edit" class="btn btn-primary mt-3">Edit this bao 🥟 🥟</a>
 				<form action="/baos/<%= bao._id %>?_method=DELETE" method="POST">
-					<button class="btn" type="submit">
-						Delete this Bao 🥟 💀
-					</button>
+					<button class="btn btn-danger mt-3" type="submit">Delete this Bao 🥟 💀</button>
 				</form>
-				<%}%>
+				<% } %>
 		</section>
 
 		<%- include('../partials/footer') %>

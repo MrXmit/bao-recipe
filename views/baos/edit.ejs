@@ -1,33 +1,28 @@
 <%- include('../partials/html-head') %>
 	<%- include('../partials/nav') %>
 
-		<section>
-			<h1>Edit the Bao! 🌮</h1>
-			<form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
-				<label>
-					Name:
-					<input type="text" name="name" autocomplete="off" value="<%= bao.name %>">
-				</label>
-				<label>
-					Recipe Details
-					<textarea name="recipe" rows="5" cols="33">
-            <%= bao.recipe %>
-        </textarea>
-				</label>
-				<label>
-					Tags (ToDo)
-				</label>
-				<label>
-					Cooking Process:
-					<select name="cookingStyle">
-						<option value="steamed" <%=bao.cookingStyle==="steamed" ? 'selected' : '' %> >Steamed</option>
-						<option value="fried" <%=bao.cookingStyle==="fried" ? 'selected' : '' %> >Fried</option>
-						<option value="steamed and sauteed" <%=bao.cookingStyle==="steamed and sauteed" ? 'selected' : '' %>>Steamed
-							and Sauteed</option>
-					</select>
-				</label>
-				<button type="submit">Update 🥟</button>
-			</form>
-		</section>
+	<section class="container mt-5">
+		<h1>Edit the Bao! 🌮</h1>
+		<form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
+			<div class="mb-3">
+				<label for="name" class="form-label">Name:</label>
+				<input type="text" id="name" name="name" class="form-control" autocomplete="off" value="<%= bao.name %>">
+			</div>
+			<div class="mb-3">
+				<label for="recipe" class="form-label">Recipe Details:</label>
+				<textarea id="recipe" name="recipe" class="form-control" rows="5" cols="33"><%= bao.recipe %></textarea>
+			</div>
+			<div class="mb-3">
+				<label for="cookingStyle" class="form-label">Cooking Process:</label>
+				<select id="cookingStyle" name="cookingStyle" class="form-select">
+					<option value="steamed" <%= bao.cookingStyle === "steamed" ? 'selected' : '' %>>Steamed</option>
+					<option value="fried" <%= bao.cookingStyle === "fried" ? 'selected' : '' %>>Fried</option>
+					<option value="steamed and sauteed" <%= bao.cookingStyle === "steamed and sauteed" ? 'selected' : '' %>>Steamed and Sauteed</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Update 🥟</button>
+		</form>
+	</section>
+	
 
 		<%- include('../partials/footer') %>
