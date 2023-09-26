@@ -64,6 +64,10 @@ app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/baos', baosRouter)
 
+// mount bootstrap
+app.use('/css', express.static('./node_modules/bootstrap/dist/css'))
+app.use('/js', express.static('./node_modules/bootstrap/dist/js'))
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))
