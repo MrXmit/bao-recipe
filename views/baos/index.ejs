@@ -1,48 +1,63 @@
 <%- include('../partials/html-head') %>
 	<%- include('../partials/nav') %>
 
-		<section>
-			<h1>Baos! 🥟🥟🥟</h1>
-			<% if (user) { %>
-				<h2>Add a Bao!</h2>
-				<form action="/baos" method="POST">
-					<label>
-						Name:
-						<input type="text" name="name" autocomplete="off">
-					</label>
-					<label>
-						Recipe Details
-						<textarea name="recipe" rows="5" cols="33">
-        </textarea>
-					</label>
-					<label>
-						Tags (ToDo)
-					</label>
-					<label>
-						Cooking Process:
-						<select name="cookingStyle">
-							<option value="steamed">Steamed</option>
-							<option value="fried">Fried</option>
-							<option value="steamed and sauteed">Steamed and Sauteed</option>
-						</select>
-					</label>
-					<button type="submit">Add 🥟</button>
-				</form>
-				<% } %>
 
 
-					<h2>All the Baos!</h2>
-					<ul>
-						<% baos.forEach(bao=> { %>
-							<li>
-								🥟
-								<a href="/baos/<%= bao._id %>">
-									<%= bao.name %>
-								</a>
-							</li>
-							<% }) %>
-					</ul>
-		</section>
+		<div class="container mt-4">
+			<div class="row">
+				<!-- First Column -->
+				<div class="col-md-6">
+					<section>
+						<h2>All the Baos!</h2>
+						<ul>
+							<% baos.forEach(bao=> { %>
+								<li>
+									🥟
+									<a href="/baos/<%= bao._id %>">
+										<%= bao.name %>
+									</a>
+								</li>
+								<% }) %>
+						</ul>
+					</section>
+				</div>
 
+				<!-- Second Column -->
+				<div class="col-md-6">
+					<section>
+						<h1>All Baos! 🥟🥟🥟</h1>
+						<% if (user) { %>
+							<h2>Add a Bao!</h2>
+							<form action="/baos" method="POST">
+								<div class="mb-3">
+									<label for="name" class="form-label">Name:</label>
+									<input type="text" class="form-control" id="name" name="name" autocomplete="off">
+								</div>
+								<div class="mb-3">
+									<label for="recipe" class="form-label">Recipe Details</label>
+									<textarea class="form-control" id="recipe" name="recipe" rows="5" cols="33"></textarea>
+								</div>
+								<label>
+									Tags (ToDo)
+
+								</label>
+								<label>
+									Cooking Process:
+									<select name="cookingStyle">
+										<option value="steamed">Steamed</option>
+										<option value="fried">Fried</option>
+										<option value="steamed and sauteed">Steamed and Sauteed</option>
+									</select>
+								</label>
+
+								<button type="submit" class="btn btn-primary">Add 🥟</button>
+							</form>
+							<% } %>
+					</section>
+				</div>
+
+
+			</div>
+		</div>
 
 		<%- include('../partials/footer') %>
