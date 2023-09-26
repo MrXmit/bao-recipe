@@ -79,10 +79,6 @@ Happy coding and happy eating! 🌍🥟👩‍🍳
 
 ---
 
-This README is a brief overview of the exciting journey we’re embarking on. We aim to keep it as a live document, refreshed and updated with our progress, new features, and all the tasty tidbits that you, our cherished community, bring to the table! Keep coming back to check what’s cooking in our digital kitchen!
-
----
-
 As always, feel free to tailor this section to fit the nuances and specific details of your project.
 # Let's dive in! 🎉
 
