@@ -19,7 +19,7 @@ Safety first! Only our Google-authenticated friends can craft or tweak recipes (
 
 ---
 
-# Welcome to Our Project! 🎉
+# Let's dive in! 🎉
 
 Hey there! Thanks for checking out our repository. If you're eager to see the live version of our website, we've got you covered!
 
@@ -33,10 +33,21 @@ Happy browsing!
 
 ---
 
-Note: Remember to adjust any parts of this template to better fit the specifics of your project or website.
+# Welcome to the Behind-the-Scenes and into the codebase! 📋
 
-As always, feel free to tweak this to suit your project's tone and specific needs.
+Hello there, fellow enthusiast! Curious about how we've been planning and tracking our progress? You're in luck.
+
+### 🌟 [**Take a sneak peek at our Trello board here!**](https://trello.com/b/s5tb9qB6/bao-recipe-which-we-refer-as-br)
+### 🚀 [**Explore our GitHub Repository right here!**](https://github.com/MrXmit/bao-recipe)
+
+
+We've been using this Trello board to keep everything organized for our "Bao Recipe" project, which, by the way, we affectionately call "BR". It's where all our brainstorming happens, our tasks get listed, and our achievements get celebrated.
+
+If you have any insights or suggestions after diving into our board, don't be shy to reach out. Collaboration and community feedback are the secret ingredients to our project's success!
+
+Happy exploring!
 
 ---
 
+Once again, make any modifications that best fit your project's character and essence.
 Thanks for stopping by our flavorful corner of the web. Every Bao Zi carries a tale, and we're all ears (and taste buds!). Dig in, experiment, and most importantly, enjoy the process. Here's to many Bao Zi-filled days ahead! 🥟🍽️❤️
