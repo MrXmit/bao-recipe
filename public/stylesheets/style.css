@@ -1,20 +1,26 @@
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
 body {
+  animation: fadeIn 2s ease-out;
   background-color: #1a1a1a;
   color: #f6f6f6;
-  /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
@@ -27,9 +33,15 @@ nav {
   align-items: center;
   padding: 10px;
   min-height: 60px;
+  transition: background-color 2s;
+}
+
+nav:hover {
+  background-color: #ddd; /* slightly darker shade on hover */
 }
 
 main {
+  animation: fadeIn 3s ease-out; /* A slightly delayed fade-in compared to body */
   display: flex;
   align-items: center;
   justify-content: center;
