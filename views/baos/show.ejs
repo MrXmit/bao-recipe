@@ -1,26 +1,27 @@
 <%- include('../partials/html-head') %>
 	<%- include('../partials/nav') %>
 
-		<section>
-			<img src="<%= bao.owner.avatar %>" alt="a picture of the Bao's owner" class="img-fluid rounded-circle">
-			<p class="mt-2">From the kitchen of <%= bao.owner.name %>
-			</p>
-			<h1 class="mt-3">
-				<%= bao.name %>
-			</h1>
-			<h2>
-				<%= bao.recipe %>
-			</h2>
-			<h3>
-				<%= bao.cookingStyle %>
-			</h3>
-
-			<% if (bao.owner.equals(user?.profile._id)) { %>
-				<a href="/baos/<%= bao._id %>/edit" class="btn btn-primary mt-3">Edit this bao 🥟 🥟</a>
-				<form action="/baos/<%= bao._id %>?_method=DELETE" method="POST">
-					<button class="btn btn-danger mt-3" type="submit">Delete this Bao 🥟 💀</button>
-				</form>
-				<% } %>
-		</section>
-
+  <div class="container mt-5">
+    <div class="d-flex justify-content-center">
+      <div class="text-center">
+        <img src="<%= bao.owner.avatar %>" alt="a picture of the Bao's owner" class="img-fluid rounded-circle mb-2">
+        <p>From the kitchen of <strong><%= bao.owner.name %></strong></p>
+        <h1 class="mt-3"><%= bao.name %></h1>
+        <h2><%= bao.recipe %></h2>
+        <h3 class="mb-3"><%= bao.cookingStyle %></h3>
+  
+        <% if (bao.owner.equals(user?.profile._id)) { %>
+          <a href="/baos/<%= bao._id %>/edit" class="btn btn-primary mb-2">Edit this bao 🥟 🥟</a><br>
+          <form action="/baos/<%= bao._id %>?_method=DELETE" method="POST" class="d-inline-block">
+            <button class="btn btn-danger" type="submit">Delete this Bao 🥟 💀</button>
+          </form>
+        <% } %>
+      </div>
+    </div>
+    
+    <div class="d-flex justify-content-center mt-4">
+      <img src="https://cdn.discordapp.com/attachments/791636167304151071/1156275066804379688/AS0004180_06.gif?ex=65146092&is=65130f12&hm=7961b901240440670a18fa90b4750a24b92fd30185e76a55930d797a35ea0b56" alt="Bao Zi" class="img-fluid rounded" style="max-width: 500px;">
+    </div>
+  </div>
+  
 		<%- include('../partials/footer') %>
