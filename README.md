@@ -46,7 +46,7 @@ Got a soft spot for any of these technologies? Or maybe some suggestions for too
 
 ---
 
-# Project Icebox - Readme
+# Project Icebox
 
 Hello folks! 🌟 Welcome to the lively and continually evolving world of Project Icebox. We're cooking up something delicious and digital, and we’d love to share a slice of our vision with you. So, grab a seat, maybe a refreshing beverage, and let’s talk about the features we're brewing in our development kitchen!
 
