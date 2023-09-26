@@ -17,7 +17,23 @@ The true essence of Bao Zi lies in its versatility. Whether you're here for the 
 ### 3. **Community First, Always 🌍💁‍♂️**: 
 Safety first! Only our Google-authenticated friends can craft or tweak recipes (keeping it real and authentic!). But hey, if you're just dropping by to get inspired or to satiate your Bao Zi curiosity, come on in. All our recipes are open for every visitor to see.
 
+---
 
+# Welcome to Our Project! 🎉
+
+Hey there! Thanks for checking out our repository. If you're eager to see the live version of our website, we've got you covered!
+
+🚀 **Live Website**: [Click here to visit our website!](https://baorecipe.fly.dev/)
+
+It's hosted on `fly.dev` and we've poured our hearts into it, so we hope you enjoy browsing through.
+
+Should you have any feedback or encounter any issues while navigating the site, please don't hesitate to raise an issue or contact us directly. We appreciate the community's help in making our website even better!
+
+Happy browsing!
+
+---
+
+Note: Remember to adjust any parts of this template to better fit the specifics of your project or website.
 
 As always, feel free to tweak this to suit your project's tone and specific needs.
 
