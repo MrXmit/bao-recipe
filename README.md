@@ -48,7 +48,7 @@ As always, feel free to tailor this section to fit the nuances and specific deta
 
 Hey there! Thanks for checking out our repository. If you're eager to see the live version of our website, we've got you covered!
 
-🚀 **Live Website**: [Click here to visit our website!](https://baorecipe.fly.dev/)
+### 🌟 [**Live Website! Click here to visit our website**](https://baorecipe.fly.dev)
 
 It's hosted on `fly.dev` and we've poured our hearts into it, so we hope you enjoy browsing through.
 
