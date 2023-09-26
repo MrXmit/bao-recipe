@@ -1,45 +1,33 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+	<%- include('../partials/nav') %>
 
-<section>
-  <h1>Edit the Bao! 🌮</h1>
-  <form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
-      <label>
-        Name:
-        <input 
-          type="text" 
-          name="name" 
-          autocomplete="off"
-          value="<%= bao.name %>"
-        >
-      </label>
-      <label>
-        Recipe Details
-        <textarea 
-          name="recipe" 
-          value="<%= bao.recipe %>"
-          rows="5" 
-          cols="33"
-        > 
+		<section>
+			<h1>Edit the Bao! 🌮</h1>
+			<form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
+				<label>
+					Name:
+					<input type="text" name="name" autocomplete="off" value="<%= bao.name %>">
+				</label>
+				<label>
+					Recipe Details
+					<textarea name="recipe" rows="5" cols="33">
+            <%= bao.recipe %>
         </textarea>
-      </label>
-      <label>
-        Tags (ToDo)
-      </label>
-      <label>
-        Cooking Process:
-          <select name="cookingStyle">
-            <option value="<%= bao.cookingStyle %>">
-                <%= bao.cookingStyle %>
-            </option>
-            <option value="steamed">Steamed</option>
-            <option value="fried">Fried</option>
-            <option value="steamed and sauteed">Steamed and Sauteed</option>
-        </select>
-      </label>
-      <button type="submit">Update 🥟</button>
-    </form>
-</section>
+				</label>
+				<label>
+					Tags (ToDo)
+				</label>
+				<label>
+					Cooking Process:
+					<select name="cookingStyle">
+						<option value="steamed" <%=bao.cookingStyle==="steamed" ? 'selected' : '' %> >Steamed</option>
+						<option value="fried" <%=bao.cookingStyle==="fried" ? 'selected' : '' %> >Fried</option>
+						<option value="steamed and sauteed" <%=bao.cookingStyle==="steamed and sauteed" ? 'selected' : '' %>>Steamed
+							and Sauteed</option>
+					</select>
+				</label>
+				<button type="submit">Update 🥟</button>
+			</form>
+		</section>
 
-
-<%- include('../partials/footer') %>
+		<%- include('../partials/footer') %>

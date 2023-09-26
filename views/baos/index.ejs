@@ -1,47 +1,48 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+	<%- include('../partials/nav') %>
 
-<section>
-  <h1>Baos! 🥟🥟🥟</h1>
-  <% if (user) { %>
-    <h2>Add a Bao!</h2>
-    <form action="/baos" method="POST">
-      <label>
-        Name:
-        <input type="text" name="name" autocomplete="off">
-      </label>
-      <label>
-        Recipe Details
-        <textarea name="recipe" rows="5" cols="33">
-          Details Details Details  
+		<section>
+			<h1>Baos! 🥟🥟🥟</h1>
+			<% if (user) { %>
+				<h2>Add a Bao!</h2>
+				<form action="/baos" method="POST">
+					<label>
+						Name:
+						<input type="text" name="name" autocomplete="off">
+					</label>
+					<label>
+						Recipe Details
+						<textarea name="recipe" rows="5" cols="33">
         </textarea>
-      </label>
-      <label>
-        Tags (ToDo)
-      </label>
-      <label>
-        Cooking Process:
-        <select name="cookingStyle" >
-          <option value="steamed">Steamed</option>
-          <option value="fried">Fried</option>
-          <option value="steamed and sauteed">Steamed and Sauteed</option>
-        </select>
-      </label>
-      <button type="submit">Add 🥟</button>
-    </form>
-  <% } %>
+					</label>
+					<label>
+						Tags (ToDo)
+					</label>
+					<label>
+						Cooking Process:
+						<select name="cookingStyle">
+							<option value="steamed">Steamed</option>
+							<option value="fried">Fried</option>
+							<option value="steamed and sauteed">Steamed and Sauteed</option>
+						</select>
+					</label>
+					<button type="submit">Add 🥟</button>
+				</form>
+				<% } %>
 
 
-  <h2>All the Baos!</h2>
-  <ul>
-    <% baos.forEach(bao => { %>
-      <li>
-        🥟 
-        <a href="/baos/<%= bao._id %>"><%= bao.name %></a> 
-      </li>
-    <% }) %>
-  </ul>
-</section>
+					<h2>All the Baos!</h2>
+					<ul>
+						<% baos.forEach(bao=> { %>
+							<li>
+								🥟
+								<a href="/baos/<%= bao._id %>">
+									<%= bao.name %>
+								</a>
+							</li>
+							<% }) %>
+					</ul>
+		</section>
 
 
-<%- include('../partials/footer') %>
+		<%- include('../partials/footer') %>

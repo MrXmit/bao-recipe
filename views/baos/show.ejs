@@ -1,25 +1,30 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+	<%- include('../partials/nav') %>
 
-<section>
-  <img src="<%= bao.owner.avatar %>" alt="a picture of the bao's owner">
-  <p>From the kitchen of <%= bao.owner.name %></p>
-  <h1><%= bao.name %></h1>
-  <h2><%= bao.recipe %></h2>
-  <h3><%= bao.cookingStyle %></h3>
-   
-  <% } %>
-</section>
-<% if (bao.owner.equals(user?.profile._id)) { %>
+		<section>
+			<img src="<%= bao.owner.avatar %>" alt="a picture of the Bao's owner">
+			<p>From the kitchen of <%= bao.owner.name %>
+			</p>
+			<h1>
+				<%= bao.name %>
+			</h1>
+			<h2>
+				<%= bao.recipe %>
+			</h2>
+			<h3>
+				<%= bao.cookingStyle %>
+			</h3>
 
-  <a href="/baos/<%= bao._id %>/edit">
-    <button class="btn">Edit this bao 🥟 🥟 </button>
-  </a>
-  <form action="/baos/<%= bao._id %>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">
-      Delete this taco 🥟 💀
-    </button>
-  </form>
+			<% if (bao.owner.equals(user?.profile._id)) { %>
+				<a href="/baos/<%= bao._id %>/edit">
+					<button class="btn">Edit this bao 🥟 🥟 </button>
+				</a>
+				<form action="/baos/<%= bao._id %>?_method=DELETE" method="POST">
+					<button class="btn" type="submit">
+						Delete this Bao 🥟 💀
+					</button>
+				</form>
+				<%}%>
+		</section>
 
-  <% } %>
-<%- include('../partials/footer') %>
+		<%- include('../partials/footer') %>
