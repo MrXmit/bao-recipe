@@ -22,6 +22,7 @@ import'./config/passport.js'
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as baosRouter } from './routes/baos.js'
+import { router as tagsRouter } from './routes/tags.js'
 
 // create the express app
 const app = express()
@@ -63,6 +64,7 @@ app.use(passDataToView)
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/baos', baosRouter)
+app.use('/tags', tagsRouter)
 
 // mount bootstrap
 app.use('/css', express.static('./node_modules/bootstrap/dist/css'))
