@@ -1,5 +1,5 @@
 # Bao Zi Recipe Hub 🥟
-![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156287051193401374/image.png?ex=65146bbb&is=65131a3b&hm=e67a7416911a00910525bc1cafd1abcd6714317c4ca4d4480f411bad744815db&)
+![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156591048173301900/image.png?ex=651586da&is=6514355a&hm=d6aab1a2e5fc73ba4f68fda4e93b6975bac22db8fe460781447165468b3cdda5&)
 
 Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I make those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi.
 
