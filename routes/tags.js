@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as tagApiCtrl from '../../controllers/api/tags.js'
+import * as tagApiCtrl from '../controllers/api/tags.js'
 
 const router = Router()
 
