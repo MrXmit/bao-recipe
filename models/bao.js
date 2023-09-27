@@ -19,9 +19,9 @@ const baoSchema = new Schema({
   owner: {
     type: Schema.Types.ObjectId, ref: 'Profile' 
   },
-  tag: {
+  tags: [{
     type: Schema.Types.ObjectId, ref: 'Tag' 
-  },
+  }],
 }, {
   timestamps: true,
 })
