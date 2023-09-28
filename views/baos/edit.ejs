@@ -1,30 +1,63 @@
 <%- include('../partials/html-head') %>
 	<%- include('../partials/nav') %>
 
-	<section class="container mt-5">
-		<h1>Edit the Bao! 🌮</h1>
-		<form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
-			<div class="mb-3">
-				<label for="name" class="form-label">Name:</label>
-				<input type="text" id="name" name="name" class="form-control" autocomplete="off" value="<%= bao.name %>">
-			</div>
-			<div class="mb-3">
-				<label for="recipe" class="form-label">Recipe Details:</label>
-				<textarea id="recipe" name="recipe" class="form-control" rows="5" cols="33"><%= bao.recipe %></textarea>
-			</div>
-			<div class="mb-3">
-				<label for="cookingStyle" class="form-label">Cooking Process:</label>
-				<select id="cookingStyle" name="cookingStyle" class="form-select">
-					<option value="steamed" <%= bao.cookingStyle === "steamed" ? 'selected' : '' %>>Steamed</option>
-					<option value="fried" <%= bao.cookingStyle === "fried" ? 'selected' : '' %>>Fried</option>
-					<option value="steamed and sauteed" <%= bao.cookingStyle === "steamed and sauteed" ? 'selected' : '' %>>Steamed and Sauteed</option>
-				</select>
-			</div>
-			<button type="submit" class="btn btn-primary">Update 🥟</button>
-		</form>
-	</section>
-  <div class="d-flex justify-content-center mt-4">
-    <img src="https://cdn.discordapp.com/attachments/791636167304151071/1156283196799991848/AS0004180_16.gif?ex=65146824&is=651316a4&hm=3c317326f7d26902e8b81fc5cf0ee42dfa9d1ca1c42a9a7d0b3cef543d9a19d3&" alt="Bao Zi" class="img-fluid rounded" style="max-width:500px;">
-  </div>	
+		<section class="container mt-5">
+			<h1>Edit the Bao! 🌮</h1>
+			<form action="/baos/<%= bao._id %>?_method=PUT" method="POST">
+				<div class="mb-3">
+					<label for="name" class="form-label">Name:</label>
+					<input type="text" id="name" name="name" class="form-control" autocomplete="off" value="<%= bao.name %>">
+				</div>
+				<div class="mb-3">
+					<label for="recipe" class="form-label">Recipe Details:</label>
+					<textarea id="recipe" name="recipe" class="form-control" rows="5" cols="33"><%= bao.recipe %></textarea>
+				</div>
+				<div class="mb-3">
+					<label for="tags" class="form-label">#Tags:</label>
+					<select name="tags" class="js-select2-tags-ajax" multiple="multiple"
+						style="width: 50%; color: black"></select>
+
+					<script>
+						$('.js-select2-tags-ajax').select2({
+							ajax: {
+								url: window.location.origin + '/tags',
+								dataType: 'json',
+								processResults: function (data) {
+									return {
+										results: $.map(data, function (obj) {
+											return { id: obj._id, text: obj.name };
+										})
+									}
+								}
+							}
+						});
+					</script>
+
+					Existing Tags:
+					<ul class="list-group">
+						<% bao.tags.forEach(tag=> { %>
+							<li class="list-group-item">
+								#<%= tag.name %>
+							</li>
+							<% }) %>
+					</ul>
+				</div>
+				<div class="mb-3">
+					<label for="cookingStyle" class="form-label">Cooking Process:</label>
+					<select id="cookingStyle" name="cookingStyle" class="form-select">
+						<option value="steamed" <%=bao.cookingStyle==="steamed" ? 'selected' : '' %>>Steamed</option>
+						<option value="fried" <%=bao.cookingStyle==="fried" ? 'selected' : '' %>>Fried</option>
+						<option value="steamed and sauteed" <%=bao.cookingStyle==="steamed and sauteed" ? 'selected' : '' %>>Steamed
+							and Sauteed</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Update 🥟</button>
+			</form>
+		</section>
+		<div class="d-flex justify-content-center mt-4">
+			<img
+				src="https://cdn.discordapp.com/attachments/791636167304151071/1156283196799991848/AS0004180_16.gif?ex=65146824&is=651316a4&hm=3c317326f7d26902e8b81fc5cf0ee42dfa9d1ca1c42a9a7d0b3cef543d9a19d3&"
+				alt="Bao Zi" class="img-fluid rounded" style="max-width:500px;">
+		</div>
 
 		<%- include('../partials/footer') %>

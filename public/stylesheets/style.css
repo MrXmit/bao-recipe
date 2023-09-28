@@ -54,3 +54,7 @@ main {
 .right {
   margin-left: auto;
 }
+
+.select2-results__option {
+  color: black;
+}

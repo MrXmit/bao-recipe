@@ -37,10 +37,29 @@
 									<label for="recipe" class="form-label">Recipe Details</label>
 									<textarea class="form-control" id="recipe" name="recipe" rows="5" cols="33"></textarea>
 								</div>
+								
 								<label>
-									Tags (comma separated)
-									<input type="text" class="form-control"  name="tagString" autocomplete="off">
+									#Tags (Select2)
+									<select name="tags" class="js-select2-tags-ajax" multiple="multiple"
+										style="width: 50%; color: black"></select>
 								</label>
+
+								<script>
+									$('.js-select2-tags-ajax').select2({
+										ajax: {
+											url: window.location.origin + '/tags',
+											dataType: 'json',
+											processResults: function (data) {
+												return {
+													results: $.map(data, function (obj) {
+														return { id: obj._id, text: obj.name };
+													})
+												}
+											}
+										}
+									});
+								</script>
+
 								<label>
 									Cooking Process:
 									<select name="cookingStyle">
@@ -55,9 +74,11 @@
 							<% } %>
 					</section>
 				</div>
-        <div class="d-flex justify-content-center mt-4">
-          <img src="https://cdn.discordapp.com/attachments/791636167304151071/1156284283493826630/AS0004180_03.gif?ex=65146927&is=651317a7&hm=cbcbc724ccbb4529d17004bccc6dd0f7919d684f76e04819e0db27f23907854e&" alt="Bao Zi" class="img-fluid rounded" style="max-width:500px;">
-        </div>
+				<div class="d-flex justify-content-center mt-4">
+					<img
+						src="https://cdn.discordapp.com/attachments/791636167304151071/1156284283493826630/AS0004180_03.gif?ex=65146927&is=651317a7&hm=cbcbc724ccbb4529d17004bccc6dd0f7919d684f76e04819e0db27f23907854e&"
+						alt="Bao Zi" class="img-fluid rounded" style="max-width:500px;">
+				</div>
 
 			</div>
 		</div>

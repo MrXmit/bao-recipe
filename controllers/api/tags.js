@@ -1,40 +1,38 @@
 import { Tag } from '../../models/tag.js'
 
+function index(req, res) {
+  if (typeof req.query.term !== 'undefined') {
+    Tag.find({ name: { $regex: req.query.term, $options: 'i' } })
+      .then(tags => {
+        res.send(tags)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/')
+      })
+  } else {
+    Tag.find({})
+      .then(tags => {
+        res.send(tags)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/')
+      })
+  }
+}
+
 function create(req, res) {
   Tag.create(req.body)
-  .then(tag => res.json(tag))
-  .catch(err => {
-    console.log(err)
-    res.json(err)
-  })
-}
-
-function proccessTags(tagsArray) {
-  const tagsIds = []
-
-  tagsArray.forEach(tagName => {
-    console.log('tagName = ', tagName)
-    Tag.findOne({name: tagName})
-    .then(tagObj => {
-      if (tagObj) {
-        tagsIds.push(tagObj._id)
-        console.log('BAOO111OOOOOO::::::: ', tagsIds)
-
-      } else {
-        tagsIds.push(Tag.create({name: tagName})._id)
-      }
-    })
+    .then(tag => res.json(tag))
     .catch(err => {
-      console.log(err)    
+      console.log(err)
+      res.json(err)
     })
-  })
-  console.log('BAOOO2222OOOOO::::::: ', tagsIds)
-
-
-  return Tag.find({name: tagsArray});
 }
+
 
 export {
   create,
-  proccessTags
+  index
 }

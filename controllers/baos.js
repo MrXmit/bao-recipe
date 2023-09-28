@@ -1,6 +1,4 @@
 import { Bao } from "../models/bao.js"
-import { Tag } from "../models/tag.js"
-import * as tagsCtrl from "../controllers/api/tags.js"
 
 function index(req, res) {
   Bao.find({})
@@ -25,22 +23,19 @@ function create(req, res) {
 	}
   
   req.body.owner = req.user.profile._id
-  req.body.tags = tagsCtrl.proccessTags(req.body.tagString.split(','))
-console.log('!!!!!!!!!!!!!!!!!!!!areq.body = ', req.body.tags)
 
   Bao.create(req.body)
   .then(bao => {
     res.redirect('/baos')
   })
   .catch(err => {
-    // console.log('ERRORRRRR',err)
     res.redirect('/baos')
   })
 }
 
 function show(req, res) {
   Bao.findById(req.params.baoId)
-  .populate('owner')
+  .populate('owner').populate('tags')
   .then(bao => {
     res.render('baos/show', {
       bao,
@@ -55,7 +50,7 @@ function show(req, res) {
 
 
 function edit(req, res) {
-  Bao.findById(req.params.baoId)
+  Bao.findById(req.params.baoId).populate('tags')
   .then(bao => {
     res.render('baos/edit', {
       bao,
