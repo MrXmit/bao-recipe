@@ -18,8 +18,11 @@ html {
 }
 
 body {
-  animation: fadeIn 2s ease-out;
-  background-color: #1a1a1a;
+  animation: fadeIn 3s ease-out;
+  background-image: url('https://cdn.discordapp.com/attachments/1046722482809352222/1156878992352231505/SHUTTERSTOCK_2098167151_Converted-01.jpg?ex=65169305&is=65154185&hm=6c8141a94d2775462fae8eeb1c19cde743a244ee1efe10b87c9778b3406a15d2&');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #f6f6f6;
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;

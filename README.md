@@ -1,7 +1,7 @@
 # Bao Zi Recipe Hub 🥟
 ![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156591048173301900/image.png?ex=651586da&is=6514355a&hm=d6aab1a2e5fc73ba4f68fda4e93b6975bac22db8fe460781447165468b3cdda5&)
 
-Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I make those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi.
+Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I get those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi. Yours might be featured in our BoaBao restaurant!
 
 ## 🌸 What's Cooking?
 
@@ -43,6 +43,11 @@ Here's what's powering our creation:
 Each piece of this tech puzzle contributes uniquely to "Bao Recipe", making it the delectable treat it is.
 
 Got a soft spot for any of these technologies? Or maybe some suggestions for tools we might have missed? Let's chat! We're always game for some tech talk.
+
+---
+### Attribution:
+- **Select2**: A significant part of the project's intuitive user experience comes from leveraging the features offered by [Select2](https://select2.org/). We're truly grateful to the entire Select2 community for developing and maintaining such a versatile tool.
+- **Personal Photoshop Skills**: The vibrant designs, intuitive layouts, and eye-catching visuals are testament to the hours of dedication and the unparalleled Photoshop expertise brought to the table.
 
 ---
 
