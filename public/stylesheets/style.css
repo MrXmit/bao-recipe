@@ -59,6 +59,23 @@ main {
   color: black;
 }
 
+.select2-selection__choice__display{
+  color: black;
+  background-color: #df363a;
+}
+
 datalist {
   display: none;
+}
+
+.btn-primary {
+  background-color: #df363a;
+}
+
+.btn-link {
+  color: #df363a;
+}
+
+a {
+  color: #df363a;
 }

@@ -8,18 +8,18 @@
 				<!-- First Column -->
 				<div class="col-md-6">
 					<section>
-						<h2>Here is the list, baobao!</h2>
-						<ul>
-							<% baos.forEach(bao=> { %>
-								<li>
-									🥟
-									<a href="/baos/<%= bao._id %>">
-										<%= bao.name %>
-									</a>
+						<h2 class="display-4">Here is the list, baobao!</h2>
+						<ul class="list-unstyled">
+								<% baos.forEach(bao=> { %>
+								<li class="my-3">
+										<span class="mr-2">🥟</span>
+										<a href="/baos/<%= bao._id %>" class="btn btn-link btn-lg" style="font-size: 2rem">
+												<%= bao.name %>
+										</a>
 								</li>
 								<% }) %>
 						</ul>
-					</section>
+				</section>
 				</div>
 
 				<!-- Second Column -->
