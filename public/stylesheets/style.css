@@ -58,3 +58,7 @@ main {
 .select2-results__option {
   color: black;
 }
+
+datalist {
+  display: none;
+}

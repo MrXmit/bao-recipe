@@ -20,7 +20,19 @@
 												<a class="nav-link" href="/baos">All Bao's</a>
 										</li>
 								</ul>
-		
+
+								<%= allTags %>
+								<label for="browser">Search a Bao</label>
+								<input list="browsers" name="browser" id="browser">
+								
+								<datalist id="browsers">
+									<option value="Edge">
+									<option value="Firefox">
+									<option value="Chrome">
+									<option value="Opera">
+									<option value="Safari">
+								</datalist>
+
 								<% if (user) { %>
 										<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 												<% if (user?.profile.avatar) { %>
