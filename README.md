@@ -1,7 +1,7 @@
 # Bao Zi Recipe Hub 🥟
 ![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156591048173301900/image.png?ex=651586da&is=6514355a&hm=d6aab1a2e5fc73ba4f68fda4e93b6975bac22db8fe460781447165468b3cdda5&)
 
-Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I get those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi. Yours might be featured in our BoaBao restaurant!
+Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I get those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi. I created this app for my mother in the hope that your Bao Zi might be featured in our BoaBao restaurant! Let's keep the restaurant interesting!
 
 ## 🌸 What's Cooking?
 
@@ -39,6 +39,8 @@ Here's what's powering our creation:
 - **Bootstrap**: It's not just about functionality; looks matter too! With Bootstrap, our site sports a clean, responsive design, ready to charm any visitor.
 
 - **Midjourney**: Coordination is key, and with Midjourney, our team stays in sync, ensuring a smooth sail through the project seas.
+
+- **jQuery**: this project judiciously utilizes the well-established and widely-recognized technology.
 
 Each piece of this tech puzzle contributes uniquely to "Bao Recipe", making it the delectable treat it is.
 
