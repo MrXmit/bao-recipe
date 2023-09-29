@@ -1,5 +1,5 @@
 # Bao Zi Recipe Hub 🥟
-![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156591048173301900/image.png?ex=651586da&is=6514355a&hm=d6aab1a2e5fc73ba4f68fda4e93b6975bac22db8fe460781447165468b3cdda5&)
+![Ni hao Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1157301489304338566/image.png?ex=65181c80&is=6516cb00&hm=1efa9ca2016d9acaa7533043074846580f044de296e04e46853d0b3366cd9c72&)
 
 Hey there, foodie adventurer! 🌍✈️ Ever wandered the streets of China and been captivated by the aroma of freshly steamed Bao Zi? Or perhaps you've simply stumbled upon a culinary documentary and wondered, "Hmm, how do I get those deliciously plump buns?" 🤔 Well, you're in the right place! Our Bao Zi Recipe Hub is your one-stop destination for all things Bao Zi. I created this app for my mother in the hope that your Bao Zi might be featured in our BoaBao restaurant! Let's keep the restaurant interesting!
 
@@ -18,7 +18,7 @@ The true essence of Bao Zi lies in its versatility. Whether you're here for the 
 ### 3. **Community First, Always 🌍💁‍♂️**: 
 Safety first! Only our Google-authenticated friends can craft or tweak recipes (keeping it real and authentic!). But hey, if you're just dropping by to get inspired or to satiate your Bao Zi curiosity, come on in. All our recipes are open for every visitor to see.
 
-![Edit Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1156287590195011634/image.png?ex=65146c3c&is=65131abc&hm=bad5da297abd2a7eefdbc19214c2edd650a5030c2001ee9859aec7e1e1e1c429&)
+![Edit Bao zi](https://cdn.discordapp.com/attachments/791636167304151071/1157303352812654693/image.png?ex=65181e3c&is=6516ccbc&hm=44bb333ed1cba8a2295f611f2b7f7e7c9f0c6b2fa2a7d41106ebecc3b08b249e&)
 
 ---
 

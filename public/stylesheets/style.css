@@ -44,7 +44,6 @@ nav:hover {
 }
 
 main {
-  animation: fadeIn 3s ease-out; /* A slightly delayed fade-in compared to body */
   display: flex;
   align-items: center;
   justify-content: center;
