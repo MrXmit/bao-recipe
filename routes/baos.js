@@ -6,7 +6,6 @@ const router = Router()
 
 router.get('/', baosCtrl.index)
 router.post('/', isLoggedIn, baosCtrl.create)
-
 router.get('/:baoId', baosCtrl.show)
 router.get('/:baoId/edit', isLoggedIn, baosCtrl.edit)
 router.put('/:baoId', isLoggedIn, baosCtrl.update)

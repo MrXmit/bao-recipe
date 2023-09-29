@@ -8,48 +8,37 @@
 
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="container-fluid">
-						<a class="navbar-brand" href="/">Ni Hao</a>
-		
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-						</button>
-		
-						<div class="collapse navbar-collapse" id="navbarNav">
-								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<a class="navbar-brand" href="/">Ni Hao</a>
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="/baos">All Bao's</a>
+							</li>
+						</ul>
+						<% if (user) { %>
+							<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+								<% if (user?.profile.avatar) { %>
+									<li class="nav-item">
+										<img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" class="rounded-circle"
+											style="width:40px; height:40px;">
+									</li>
+									<% } %>
 										<li class="nav-item">
-												<a class="nav-link" href="/baos">All Bao's</a>
+											<a class="nav-link" href="/auth/logout">Logout</a>
 										</li>
-								</ul>
-
-								<label for="browser">Search a Bao</label>
-								<input list="browsers" name="browser" id="browser">
-								
-								<datalist id="browsers">
-									<option value="Edge">
-									<option value="Firefox">
-									<option value="Chrome">
-									<option value="Opera">
-									<option value="Safari">
-								</datalist>
-
-								<% if (user) { %>
-										<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-												<% if (user?.profile.avatar) { %>
-														<li class="nav-item">
-																<img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" class="rounded-circle" style="width:40px; height:40px;">
-														</li>
-												<% } %>
-												<li class="nav-item">
-														<a class="nav-link" href="/auth/logout">Logout</a>
-												</li>
-										</ul>
-								<% } else { %>
-										<div id="g_id_onload" data-client_id="<%= googleClientID %>" data-login_uri="/auth/google"
-												data-auto_prompt="false" data-prompt_parent_id="g_id_onload"></div>
-										<div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
-												data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+							</ul>
+							<% } else { %>
+								<div id="g_id_onload" data-client_id="<%= googleClientID %>" data-login_uri="/auth/google"
+									data-auto_prompt="false" data-prompt_parent_id="g_id_onload"></div>
+								<div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+									data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
 								<% } %>
-						</div>
+					</div>
 				</div>
-		</nav>
-		
+			</nav>

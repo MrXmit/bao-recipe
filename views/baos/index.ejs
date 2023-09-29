@@ -10,16 +10,16 @@
 					<section>
 						<h2 class="display-4">Here is the list, baobao!</h2>
 						<ul class="list-unstyled">
-								<% baos.forEach(bao=> { %>
+							<% baos.forEach(bao=> { %>
 								<li class="my-3">
-										<span class="mr-2">🥟</span>
-										<a href="/baos/<%= bao._id %>" class="btn btn-link btn-lg" style="font-size: 2rem">
-												<%= bao.name %>
-										</a>
+									<span class="mr-2">🥟</span>
+									<a href="/baos/<%= bao._id %>" class="btn btn-link btn-lg" style="font-size: 2rem">
+										<%= bao.name %>
+									</a>
 								</li>
 								<% }) %>
 						</ul>
-				</section>
+					</section>
 				</div>
 
 				<div class="col-md-6">
@@ -36,7 +36,7 @@
 									<label for="recipe" class="form-label">Recipe Details</label>
 									<textarea class="form-control" id="recipe" name="recipe" rows="5" cols="33"></textarea>
 								</div>
-								
+
 								<label>
 									#Tags (Select2)
 									<select name="tags" class="js-select2-tags-ajax" multiple="multiple"
