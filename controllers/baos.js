@@ -48,7 +48,6 @@ function show(req, res) {
   })
 }
 
-
 function edit(req, res) {
   Bao.findById(req.params.baoId).populate('tags')
   .then(bao => {
