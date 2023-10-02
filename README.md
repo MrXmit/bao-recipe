@@ -86,7 +86,6 @@ Happy coding and happy eating! 🌍🥟👩‍🍳
 
 ---
 
-As always, feel free to tailor this section to fit the nuances and specific details of your project.
 # Let's dive in! 🎉
 
 Hey there! Thanks for checking out our repository. If you're eager to see the live version of our website, we've got you covered!
